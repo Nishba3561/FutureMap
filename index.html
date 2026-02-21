@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMap 🚀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="particles"></div>
+
+  <div class="page active" id="page1">
+    <div class="logo">FutureMap 🚀</div>
+    <div class="tagline">Discover your path from your passions to success!</div>
+    <button class="btn-primary" onclick="showPage('page2')">Start</button>
+  </div>
+
+  <div class="page" id="page2">
+    <div class="page-title">What Matters Most to You?</div>
+    <div class="page-sub">Pick a theme to explore your future path</div>
+    <div class="categories-grid" id="catGrid"></div>
+  </div>
+
+  <div class="page" id="page3">
+    <div class="questions-wrapper">
+      <div id="catChip" class="cat-chip"></div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressBar" style="width:10%"></div>
+      </div>
+      <div class="q-counter" id="qCounter">QUESTION 1 OF 10</div>
+      <div class="q-text" id="qText"></div>
+      <div class="options-grid" id="optionsGrid"></div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next →</button>
+    </div>
+  </div>
+
+  <div class="page" id="page4">
+    <div class="page-title" id="resultsTitle">Your Ideal Paths</div>
+    <div class="page-sub" id="resultsSub">Click any path to see your personalized roadmap</div>
+    <div class="results-grid" id="resultsGrid"></div>
+    <button class="back-btn" onclick="showPage('page2')">← Explore Another Category</button>
+  </div>
+
+  <div class="page" id="page5">
+    <div id="roadmapContent" class="roadmap-wrapper"></div>
+    <button class="back-btn" onclick="showPage('page4')">← Back to Results</button>
+  </div>
+
+  <script src="database.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
